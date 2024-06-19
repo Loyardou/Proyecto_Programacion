@@ -1,0 +1,27 @@
+.example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://clipground.com/images/anime-logo-png-1.png');
+    background-size: cover;
+  }
+  .conteiner{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+  }
+  h1{
+    text-align: center;
+
+  }
+.contenido{
+    width: 200px;
+    display: inline-block;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px;
+}
+p{
+    padding: 5px;
+}

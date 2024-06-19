@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    background-color: seagreen;
+    border-radius: 20px;
+}
+.centrar{
+    display: flex;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+}
+.boton{
+    width: 120px;
+    margin: auto;
+}

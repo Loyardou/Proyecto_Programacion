@@ -1,0 +1,39 @@
+<mat-toolbar>
+  
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/anime">Anime</button>
+    <button mat-menu-item>Generos</button>
+    <button mat-menu-item>Producto</button>
+    <button mat-menu-item>Indumentaria</button>
+  </mat-menu>
+
+   
+
+    <span class="example-spacer"></span>
+    
+   
+    <button mat-icon-button >
+      <mat-icon >person</mat-icon>
+    
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/anime">Anime</button>
+      <button mat-menu-item>Generos</button>
+      <button mat-menu-item>Producto</button>
+      <button mat-menu-item>Indumentaria</button>
+    </mat-menu>
+ 
+    
+    <button mat-icon-button [matMenuTriggerFor]="usuario" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <mat-menu #usuario="matMenu">
+      <button mat-menu-item routerLink="/registro">Registrarse</button>
+      <button mat-menu-item routerLink="/inicio-sesion">Iniciar sesion</button>
+    </mat-menu>
+    
+   
+    
+  </mat-toolbar>
+  
