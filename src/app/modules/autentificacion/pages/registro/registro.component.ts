@@ -8,6 +8,8 @@ import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { FirestoreService } from 'src/app/modules/shared/services/firestore.service';
 
+// 
+import * as CryptoJS from 'crypto-js';
 
 @Component({
   selector: 'app-registro',
@@ -72,6 +74,13 @@ async  registrar() {
       const uid = await this.servicioAuth.obtenerUid();
 
       this.usuarios.uid = uid;
+      //Encriptacion de la contraseña de usuario
+      /*
+       *SHA-256 es un algoritmo de hashin seguro que toma una entrada (en este caso la contraseña)
+        y produce una cadena de caracteres HEXADECIMAL que representa su hash
+        toString( : Convierte el resultado del hash en una cadena de caracteres legible)
+      */
+     this.usuarios.password = CryptoJS.SHA256(this.usuarios.password).toString();
        this.guardarUsuario();
     this.limpiarinputs();
   }
