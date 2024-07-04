@@ -2,10 +2,10 @@
   
   <button mat-button [matMenuTriggerFor]="menu">Menu</button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item routerLink="/anime">Anime</button>
-    <button mat-menu-item>Generos</button>
-    <button mat-menu-item>Producto</button>
-    <button mat-menu-item>Indumentaria</button>
+    <button mat-menu-item routerLink="/producto">Producto</button>
+    <button mat-menu-item routerLink="/adopcion">Adopcion</button>
+    <button mat-menu-item routerLink="/ubicacion">Ubicacion</button>
+    <button mat-menu-item routerLink="/contacto">Contacto</button>
   </mat-menu>
 
    
@@ -16,12 +16,7 @@
  
     
   
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item routerLink="/producto">Producto</button>
-      <button mat-menu-item routerLink="">Adopcion</button>
-      <button mat-menu-item routerLink="">Ubicacion</button>
-      <button mat-menu-item routerLink="">Contacto</button>
-    </mat-menu>
+    
  
     
     <button mat-icon-button [matMenuTriggerFor]="usuario" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
