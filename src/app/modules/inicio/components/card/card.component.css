@@ -2,14 +2,12 @@
     max-width: 400px;
   }
   
-  .example-header-image {
-    background-image: url('https://clipground.com/images/anime-logo-png-1.png');
-    background-size: cover;
-  }
+  
   .conteiner{
     display: flex;
     padding: 10px;
     justify-content: center;
+    
   }
   h1{
     text-align: center;
@@ -21,7 +19,19 @@
     padding: 15px;
     border-radius: 8px;
     margin: 10px;
+    backdrop-filter: blur(30px);
+    background-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 p{
     padding: 5px;
+}
+#img-container{
+  width: 400px;
+  height: 350px;
+}
+#tamaño-img{
+  width: 150px;
+  height: 150px;
 }

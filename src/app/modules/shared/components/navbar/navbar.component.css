@@ -1,4 +1,53 @@
 .example-spacer {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+@media(min-width: 300px) and (max-width: 700px) {
+  mat-toolbar {
+    background-color: rgb(255, 235, 171);
   }
+
+  #menuInicio {
+    display: none;
+  }
+
+  #menuPorducto {
+    display: none;
+  }
+}
+
+@media(min-width: 700px) {
+  mat-toolbar {
+    background-image: url('src/assets/fondonav.jpg');
+    height: 100px;
+  }
+
+  #menuSessiones {
+    display: none;
+  }
+}
+
+#boton-menu {
+  backdrop-filter: blur(30px);
+  background-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.37);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+
+}
+#person-menu{
+  backdrop-filter: blur(30px);
+  background-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+#menu-item{
+  backdrop-filter: blur(30px);
+  background-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+  
+
+ 
   

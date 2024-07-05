@@ -1,5 +1,8 @@
+<body style="background-color: black;">
+  
+
 <div class="centrar">
-  <h1>Registro</h1>
+  <h1 id="color-h1">Registro</h1>
 </div>
   
   <div class="centrar">
@@ -12,7 +15,7 @@
 <mat-form-field appearance="fill">
     <mat-label>Ingrese su nombre</mat-label>
     <!--NGMODEL = CONECTA DE FORMA BIDIRECCIONAL COMO UN FORMULARIO-->
-    <input [(ngModel)]="usuarios.nombre" matInput placeholder="ej pepardou">
+    <input [(ngModel)]="usuarios.nombre" matInput placeholder="Ingrese su nombre">
     <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
     
   </mat-form-field>
@@ -21,14 +24,14 @@
 
   <mat-form-field appearance="fill">
     <mat-label>Ingrese su apellido</mat-label>
-    <input [(ngModel)]="usuarios.apellido" matInput placeholder="pepeelmegor" required>
+    <input [(ngModel)]="usuarios.apellido" matInput placeholder="Ingrese su apellido" required>
     <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
    
   </mat-form-field>
 
   <mat-form-field appearance="fill">
     <mat-label>ingrese su email:</mat-label>
-    <input [(ngModel)]="usuarios.email" matInput placeholder="elpepaso@gmail.com" required>
+    <input [(ngModel)]="usuarios.email" matInput placeholder="Ingrese su gmail" required>
     <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
     
   </mat-form-field>
@@ -55,3 +58,4 @@
 
 </div>
 </div>
+</body>
