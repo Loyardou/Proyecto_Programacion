@@ -7,20 +7,22 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { AdopcionComponent } from './pages/adopcion/adopcion.component';
 import { UbicacionComponent } from './pages/ubicacion/ubicacion.component';
 
-
-
 @NgModule({
   declarations: [
     ProductoComponent,
     ContactoComponent,
     AdopcionComponent,
     UbicacionComponent,
-   
-    
   ],
   imports: [
     CommonModule,
     ProductoRoutingModule
+  ],
+  exports: [
+    ProductoComponent,
+    ContactoComponent,
+    AdopcionComponent,
+    UbicacionComponent,
   ]
 })
 export class ProductoModule { }

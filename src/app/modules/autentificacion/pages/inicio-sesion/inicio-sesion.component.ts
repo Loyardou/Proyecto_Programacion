@@ -103,28 +103,28 @@ export class InicioSesionComponent {
       const usuarioData = usuarioDoc.data() as Usuario;
 
       // hash de la contraseña ingresada por el usuario
-       const hashedPassword = CryptoJS.SHA256(credenciales.password).toString();
+      const hashedPassword = CryptoJS.SHA256(credenciales.password).toString();
 
-       if(hashedPassword !== usuarioData.password){
+      if (hashedPassword !== usuarioData.password) {
         alert('contraseña incorrecta');
         this.usuarioIngresado.password = '';
         return;
-       }
-       const res = await this.servicioAuth.IniciarSesion(credenciales.email, credenciales.password)
-      .then(res => {
-        alert("se ha logueado con exito:")
-        this.servicioRutas.navigate(['/inicio'])
-      })
-      .catch(err => {
-        alert('Hubo un problema al iniciar sesion:(' + err)
+      }
+      const res = await this.servicioAuth.IniciarSesion(credenciales.email, credenciales.password)
+        .then(res => {
+          alert("se ha logueado con exito:")
+          this.servicioRutas.navigate(['/inicio'])
+        })
+        .catch(err => {
+          alert('Hubo un problema al iniciar sesion:(' + err)
 
-        this.limpiarinputs();
-      })
-    } catch(error) {
+          this.limpiarinputs();
+        })
+    } catch (error) {
       this.limpiarinputs();
-     }
+    }
 
-    
+
   }
   limpiarinputs() {
     const inputs = {

@@ -1,39 +1,38 @@
+<mat-toolbar>
 
-<mat-toolbar >
-  
   <button mat-button [matMenuTriggerFor]="menu" id="boton-menu">Menu</button>
-  <mat-menu id="menu-item" #menu="matMenu"  >
-    <button  mat-menu-item routerLink="/Producto">Producto</button>
-    <button mat-menu-item routerLink="/Adopcion">Adopcion</button>
-    <button mat-menu-item routerLink="/Ubicacion">Ubicacion</button>
-    <button mat-menu-item routerLink="/Contacto">Contacto</button>
+  <mat-menu id="menu-item" #menu="matMenu">
+    <button mat-menu-item routerLink="/producto">Producto</button>
+    <button mat-menu-item routerLink="/adopcion">Adopcion</button>
+    <button mat-menu-item routerLink="/ubicacion">Ubicacion</button>
+    <button mat-menu-item routerLink="/contacto">Contacto</button>
   </mat-menu>
-  
-  
-   
 
-    <span class="example-spacer"></span>
-    
-   
- 
-    
-  
-    <button mat-icon-button   aria-label="Example icon-button with heart icon" id="person-menu" routerLink="/inicio">
-      <mat-icon>house</mat-icon>
-    </button>
- 
-    <!-- Manejo del inicio y del cerrar sesion-->
-    
-    <button mat-icon-button [matMenuTriggerFor]="usuario" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" id="person-menu">
-      <mat-icon>person</mat-icon>
-    </button>
-    <mat-menu #usuario="matMenu">
-      <button mat-menu-item (click)="iniciar()" *ngIf="logueado" routerLink="/registro">Registrarse</button>
-      <button mat-menu-item (click)="iniciar()" *ngIf="logueado" routerLink="/inicio-sesion">Iniciar sesion</button>
-      <button mat-menu-item (click)="cerrarSesion()" *ngIf="deslogueado">Cerrar Sesion</button>
-    </mat-menu>
-    
-   
-    
-  </mat-toolbar>
-  
+
+
+
+  <span class="example-spacer"></span>
+
+
+
+
+
+  <button mat-icon-button aria-label="Example icon-button with heart icon" id="person-menu" routerLink="/inicio">
+    <mat-icon>house</mat-icon>
+  </button>
+
+  <!-- Manejo del inicio y del cerrar sesion-->
+
+  <button mat-icon-button [matMenuTriggerFor]="usuario" class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon" id="person-menu">
+    <mat-icon>person</mat-icon>
+  </button>
+  <mat-menu #usuario="matMenu">
+    <button mat-menu-item (click)="iniciar()" *ngIf="logueado" routerLink="/registro">Registrarse</button>
+    <button mat-menu-item (click)="iniciar()" *ngIf="logueado" routerLink="/inicio-sesion">Iniciar sesion</button>
+    <button mat-menu-item (click)="cerrarSesion()" *ngIf="deslogueado">Cerrar Sesion</button>
+  </mat-menu>
+
+
+
+</mat-toolbar>
