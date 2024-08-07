@@ -1,0 +1,97 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Imagen</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let producto of coleccionProductos">
+            <th scope="row">1</th>
+            
+            <td>
+                <img src="{{producto.imagen}}" alt="{{producto.alt}}">
+            </td>
+            <td>{{producto.nombre}}</td>
+            <td>{{producto.precio}}</td>
+            <td>{{producto.descripcion}}</td>
+            <td>{{producto.categoria}}</td>
+
+            <!-- acciones -->
+            <td>
+                <button id="btn-edit" title="editar" type="button" class="btn-btn-outline-warning">
+                    <mat-icon>edit</mat-icon>
+                </button>
+            </td>
+            <td>
+                <button id="btn-edit" title="eliminar" type="button" class="btn-btn-outline-danger">
+                    <mat-icon>delete</mat-icon>
+                </button>
+                
+            </td>
+        </tr>
+    </tbody>
+</table>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#agregarProducto">
+    Agregar nuevo producto
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="agregarProducto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ingrese un nuevo producto</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div [formGroup]="producto"  class="modal-body" >
+        <div class="mb-3">
+            <label class="form-label">Ingrese el nombre del producto:</label>
+            <input type="text" class="formControl" formControlName="nombre" placeholder="ej: Alimento balanceado">
+
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Ingrese descripcion del producto</label>
+            <input type="text" class="formControl" formControlName="descripcion" placeholder="ej: 18 kg">
+
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Ingrese el precio:</label>
+            <input type="number" class="formControl" formControlName="precio" placeholder="ej: $500">
+
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Seleccione una categoria</label>
+           <select class="form-control" class="form-select">
+            <option selected > Elija una opcion</option>
+            <option value="Alimento"></option>
+            <option value="Producto"></option>
+           </select>
+
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Ingrese una imagen:</label>
+            <input type="text" class="formControl" formControlName="imagen" placeholder="ej: Ingrese un vinculo de una imagen">
+
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Ingrese un texto alternativo:</label>
+            <input type="text" class="formControl" formControlName="alt" placeholder="Ingrese un texto alternativo">
+
+        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Guardar</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss>Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>

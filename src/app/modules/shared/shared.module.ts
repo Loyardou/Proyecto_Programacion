@@ -8,12 +8,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { MatCard } from '@angular/material/card';
 
 @NgModule({
   declarations: [
     NavbarComponent,
     FooterComponent,
-    CarouselComponent
+    CarouselComponent,
+
   ],
   imports: [
     CommonModule,
@@ -21,7 +23,9 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+   
+  
   ],
   exports: [
     NavbarComponent,
@@ -30,6 +34,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     MatButtonModule,
     MatToolbarModule,
     MatButtonModule,
-    MatMenuModule]
+    MatMenuModule,
+  
+  ]
 })
 export class SharedModule { }

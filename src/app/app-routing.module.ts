@@ -20,16 +20,10 @@ const routes: Routes = [{
   path: "", loadChildren: () => import('./modules/producto/producto.module').then(m => m.ProductoModule)
 },
 {
-  path: "", loadChildren: () => import('./modules/producto/pages/adopcion/adopcion.component').then(m => m.AdopcionComponent)
-},
-{
-  path: "", loadChildren: () => import('./modules/producto/pages/ubicacion/ubicacion.component').then(m => m.UbicacionComponent),
-},
-{
-  path: "", loadChildren: () => import('./modules/producto/pages/contacto/contacto.component').then(m => m.ContactoComponent),
-},
-{
   path: "", loadChildren: () => import('./modules/autentificacion/autentificacion.module').then(m => m.AutentificacionModule),
+},
+{
+path: "", loadChildren:() => import('./modules/admin/admin.module').then(m=>m.AdminModule)
 },
 ];
 

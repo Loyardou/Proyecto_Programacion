@@ -64,7 +64,7 @@ export class RegistroComponent {
       .then(respuesta => {
         Swal.fire({
           title: "Bien hecho",
-          text: "Clickeaste el boton!",
+          text: "Te has registrado!",
           icon: "success"
         });
         // accedemos al servicio de rutas -> metodo navigate
@@ -73,11 +73,7 @@ export class RegistroComponent {
       })
       //el metodo catch toma una falla y la devuelve un error
       .catch(error => {
-        Swal.fire({
-          title: "Carajo!",
-          text: "Te equivocaste!",
-          icon: "error"
-        });
+
       })
     const uid = await this.servicioAuth.obtenerUid();
 
