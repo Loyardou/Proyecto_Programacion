@@ -41,5 +41,19 @@ private productosCollection: AngularFirestoreCollection<Producto>
     return this.productosCollection.snapshotChanges().pipe(map(action => action.map(a => a.payload.doc.data())))
    }
    //EDITAR productos
+
    //ELIMINAR productos
+   eliminarProducto(idProducto : string){
+    return new Promise((resolve, reject) => {
+      try{
+        const respuesta = this.productosCollection.doc(idProducto).delete()
+        resolve(respuesta);
+      }
+        catch(error){
+        reject(error)
+        }
+      
+    })
+   
+  }
 }
