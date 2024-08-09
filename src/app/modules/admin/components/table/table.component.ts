@@ -78,4 +78,38 @@ productoSeleccionado!: Producto;
   
   }
 
+
+  mostrarEditar(productoSeleccionado: Producto){
+    this.productoSeleccionado = productoSeleccionado;
+    this.producto.setValue({
+      nombre: productoSeleccionado.nombre,
+      precio: productoSeleccionado.precio,
+      descripcion: productoSeleccionado.descripcion,
+      categoria: productoSeleccionado.categoria,
+      imagen: productoSeleccionado.imagen,
+      alt: productoSeleccionado.alt,
+     
+    })
+  }
+
+
+  editarProducto(){
+    let datos: Producto = {
+      idProducto: this.productoSeleccionado.idProducto,
+      nombre: this.producto.value.nombre!,
+      precio: this.producto.value.precio!,
+      descripcion: this.producto.value.descripcion!,
+      categoria: this.producto.value.categoria!,
+      imagen: this.producto.value.imagen!,
+      alt: this.producto.value.alt!,
+
+    }
+    this.servicioCrud.modificarProducto(this.productoSeleccionado.idProducto, datos)
+    .then(producto =>{
+      alert("El producto fue modificado con exito")
+    })
+    .catch(error =>{
+      alert("Hubo un problema al modificar el producto")
+    })
+  }
 }

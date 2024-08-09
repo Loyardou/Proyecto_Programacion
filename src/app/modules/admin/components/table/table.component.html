@@ -24,13 +24,13 @@
 
             <!-- acciones -->
             <td>
-                <button id="btn-edit" title="editar" type="button" class="btn-btn-outline-warning">
-                    <mat-icon>edit</mat-icon>
+                <button id="btn-delete" title="eliminar" type="button" class="btn-btn-outline-danger" data-bs-toggle="modal"   data-bs-target="#eliminarProducto" (click)="mostrarBorrar(producto)">
+                    <mat-icon>Borrar</mat-icon>
                 </button>
             </td>
             <td>
-                <button id="btn-edit" title="eliminar" type="button" class="btn-btn-outline-danger">
-                    <mat-icon>delete</mat-icon>
+                <button id="btn-edit" title="edit" type="button" class="btn-btn-outline-warning" data-bs-toggle="modal" data-bs-target="#editarProducto">
+                    <mat-icon>editar</mat-icon>
                 </button>
                 
             </td>
@@ -95,6 +95,27 @@
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="agregarProducto()">Guardar</button>
             <button type="button" class="btn btn-primary" data-bs-dismiss>Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="modal fade" *ngIf="modalVisibleProducto" id="eliminarProducto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">¿Estas seguro de eliminar el producto?</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         {{productoSeleccionado.nombre}}
+         <img src="{{productoSeleccionado.imagen}}" alt="{{productoSeleccionado.alt}}">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="borrarProducto()">Eliminar</button>
+          <button type="button" class="btn btn-primary">Understood</button>
         </div>
       </div>
     </div>
