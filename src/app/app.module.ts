@@ -10,11 +10,13 @@ import { SharedModule } from './modules/shared/shared.module';
 import { environment } from 'src/enviroments/environment';
 import{AngularFireModule}from '@angular/fire/compat';
 import{AngularFireAuthModule}from '@angular/fire/compat/auth'
-import{AngularFireStorageModule} from '@angular/fire/compat/storage'
+import{AngularFireStorageModule} from '@angular/fire/compat/storage';
+import { CardJueguetesComponent } from './inicio/components/card-jueguetes/card-jueguetes.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CardJueguetesComponent
   ],
   imports: [
     BrowserModule,

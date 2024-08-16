@@ -7,21 +7,26 @@ import { CardComponent } from './components/card/card.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 
+
 @NgModule({
   declarations: [
     InicioComponent,
-    CardComponent
+    CardComponent,
+   
   ],
   imports: [
     CommonModule,
     InicioRoutingModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    
 
   ],
   exports: [
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    CardComponent
+   
   ]
 })
 export class InicioModule { }
