@@ -1,31 +1,21 @@
-<div class="container px-4 text-center">
-  <div class="row">
-    <div class="col-6">
-      <div class="p-3">
 
-        <div class="parent" *ngFor="let i  of info">
-          <div class="card">
-            <div class="content-box">
-              <img mat-card-image src="{{i.imagen}}" alt="" id="tamaño-img">
-              <span class="card-title">{{i.nombre}}</span>
-
-              <span class="see-more">Comprar</span>
-            </div>
-            <div class="date-box">
-              <span class="month">PET SHOP</span>
-            </div>
-          </div>
-        </div>   
-      </div>
-
-      <div class="col-6">
-        <div class="p-3">
-          <div class="col-6 col-md-4">
-
-            <img class="img-card" id="img-container" src="./assets/perritofeli.gif" alt="">
-
+   
+    <div class="row g-0">
+      <div class="col-sm-6 col-md-8"> <div class="parent" *ngFor="let i  of info">
+        <div class="card">
+        <img src="{{i.imagen}}" alt="" >
+          <div class="card__content">
+            <p class="card__title">{{i.nombre}}</p>
+            <p class="card__description"></p>
           </div>
         </div>
       </div>
     </div>
-  </div>
+    </div>
+
+
+  
+
+
+
+

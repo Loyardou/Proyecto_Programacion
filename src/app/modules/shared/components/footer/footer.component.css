@@ -7,6 +7,10 @@
     text-align: center;
 }
 
+ul{
+  list-style: none;
+}
+
 
 
   .svg {
@@ -65,7 +69,7 @@
     border-radius: 50%;
     transition: all 0.3s;
     height: 60px;
-    width: 60px;
+    width: 600px;
   }
   
   .iso-pro:hover span {

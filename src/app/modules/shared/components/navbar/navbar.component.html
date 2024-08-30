@@ -36,6 +36,7 @@
     <button mat-menu-item (click)="cerrarSesion()" *ngIf="deslogueado">Cerrar Sesion</button>
   </mat-menu>
 
-
-
+<!--Label para modo oscuro-->
+<label for="toggle" id="label_toggle"><i class="fa-solid fa-moon"></i></label>
+<input type="checkbox" id="toggle" (click)="cambiarFondo()">
 </mat-toolbar>
