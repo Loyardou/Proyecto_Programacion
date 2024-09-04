@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Alimento } from 'src/app/models/alimento';
 
+
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
