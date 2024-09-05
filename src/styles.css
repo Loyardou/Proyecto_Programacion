@@ -1,25 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
 /*estilos para modo oscuro*/
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-body{
-    transition: all 1.5 ease;
-    
+html,
+body {
+    height: 100%;
 }
-#toggle{
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+body {
+    transition: all 1.5 ease;
+
+}
+
+#toggle {
     display: none;
 }
 
-#label_toggle{
+#label_toggle {
     position: static;
     cursor: pointer;
 }
-.dark{
+
+.dark {
     background-color: black;
     color: white;
     transition: all 1.5 ease;
 }
-*{
+
+
+.white {
+    background-color: white;
     color: black;
+    transition: all 1.5 ease;
 }

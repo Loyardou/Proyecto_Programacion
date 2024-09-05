@@ -36,11 +36,11 @@ let label_toggle : HTMLElement | null = document.getElementById('label_toggle') 
 if (toggle){
   let checked: boolean = toggle.checked;
   document.body.classList.toggle('dark', checked)
-  if(checked){
-    label_toggle!.innerHTML = '<i class="fa-solid fa-sun"></i>'
-  }else{
-    label_toggle!.innerHTML = '<i class="fa-solid fa-moon"></i>'
-  }
+  // if(checked){
+  //   label_toggle!.innerHTML = '<i class="fa-solid fa-sun"></i>'
+  // }else{
+  //   label_toggle!.innerHTML = '<i class="fa-solid fa-moon"></i>'
+  // }
 
 }
 
