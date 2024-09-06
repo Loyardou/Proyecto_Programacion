@@ -1,39 +1,101 @@
-<body class="background-color">
-    <br>
-    <h1 class="contact__title">Adopciones</h1>
-<div class="container overflow-hidden">
-    <div class="row gx-5">
-      <div class="col">
-       <img src="../../../../../assets/Adopta.jfif" alt="" class="imagen-adopta">
+
+<section>
+  <div class="container">
+      <div class="carousel">
+          <input type="radio" name="slides" checked="checked" id="slide-1">
+          <input type="radio" name="slides" id="slide-2">
+          <input type="radio" name="slides" id="slide-3">
+          <input type="radio" name="slides" id="slide-4">
+          <input type="radio" name="slides" id="slide-5">
+          <input type="radio" name="slides" id="slide-6">
+          <ul class="carousel__slides">
+              <li class="carousel__slide">
+                  <figure>
+                      <div>
+                          <img src="{{info[0].imagen}}" alt="">
+                      </div>
+                      <figcaption>
+                          {{info[0].nombre}}
+                          <span class="credit">Photo: {{info[0].Photo}}</span>
+                      </figcaption>
+                  </figure>
+              </li>
+              <li class="carousel__slide">
+                  <figure>
+                      <div>
+                          <img src="{{info[1].imagen}}" alt="">
+                      </div>
+                      <figcaption>
+                        {{info[1].nombre}}
+                          <span class="credit">Photo: {{info[1].Photo}}</span>                            
+                      </figcaption>
+                  </figure>
+              </li>
+              <li class="carousel__slide">
+                  <figure>
+                      <div>
+                          <img src="{{info[2].imagen}}" alt="">
+                      </div>
+                      <figcaption>
+                        {{info[2].nombre}}
+                          <span class="credit">Photo: {{info[2].Photo}}</span>                            
+                      </figcaption>
+                  </figure>
+              </li>
+              <li class="carousel__slide">
+                  <figure>
+                      <div>
+                          <img src="{{info[3].imagen}}" alt="">
+                      </div>
+                      <figcaption>
+                        {{info[3].nombre}}
+                          <span class="credit">Photo: {{info[3].Photo}}</span>                            
+                      </figcaption>
+                  </figure>
+              </li>
+              <li class="carousel__slide">
+                  <figure>
+                      <div>
+                          <img src="{{info[4].imagen}}" alt="">
+                      </div>
+                      <figcaption>
+                        {{info[4].nombre}}
+                          <span class="credit">Photo: {{info[4].Photo}}</span>                            
+                      </figcaption>
+                  </figure>
+              </li>
+              <li class="carousel__slide">
+                  <figure>
+                      <div>
+                          <img src="{{info[5].imagen}}" alt="">
+                      </div>
+                      <figcaption>
+                        {{info[5].nombre}}
+                          <span class="credit">Photo: {{info[5].Photo}}</span>                            
+                      </figcaption>
+                  </figure>
+              </li>
+          </ul>    
+          <ul class="carousel__thumbnails">
+              <li>
+                  <label for="slide-1"><img src="{{info[0].imagen}}" alt=""></label>
+              </li>
+              <li>
+                  <label for="slide-2"><img src="{{info[1].imagen}}" alt=""></label>
+              </li>
+              <li>
+                  <label for="slide-3"><img src="{{info[2].imagen}}" alt=""></label>
+              </li>
+              <li>
+                  <label for="slide-4"><img src="{{info[3].imagen}}" alt=""></label>
+              </li>
+              <li>
+                  <label for="slide-5"><img src="{{info[4].imagen}}" alt=""></label>
+              </li>
+              <li>
+                  <label for="slide-6"><img src="{{info[5].imagen}}" alt=""></label>
+              </li>
+          </ul>
       </div>
-      <div class="col" >
-        <div class="p-3 border bg-light"><div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active" >
-                <img src="../../../../../assets/anticristo.jfif" class="d-block w-100" alt="...">
-                <H1 class="centrar">Anticristo666</H1>
-              </div>
-              <div class="carousel-item">
-                <img src="../../../../../assets/belleza.jfif" class="d-block w-100" alt="...">
-                <H1 class="centrar">Belleza</H1>
-              </div>
-              <div class="carousel-item">
-                <img src="../../../../../assets/princesa.jpg" class="d-block w-100" alt="...">
-                <H1 class="centrar">Princesa</H1>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div></div>
-      </div>
-    </div>
   </div>
-
-
-</body>
+</section>

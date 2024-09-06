@@ -18,6 +18,7 @@
 .boton{
     width: 120px;
     margin: auto;
+    color: dodgerblue;
 }
 .fotoperfil{
     width: 120px;
@@ -34,6 +35,6 @@
     backdrop-filter: blur(30px);
     background-color:  rgba(255, 255, 255, 0.37);
     box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.37);
-    color: aliceblue;
+    
     border-radius: 20px;
 }

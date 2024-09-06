@@ -1,19 +1,17 @@
-<div class="container px-4 text-center">
-  <div class="row gx-4">
-    <div class="col">
-      <div class="p-3">
-        <div class="parent" *ngFor="let i  of info">
+<div class="container">
+  <div class="row">
 
-          <div class="card">
-            <img src="{{i.imagen}}" alt="" class="card-image">
-            <div class="category"> {{i.nombre}} </div>
-            <div class="heading">{{i.nombre}}
-              <div class="author"> By <span class="name">Loyola</span> 4 days ago</div>
-            </div>
-          </div>
+    <div class="col-lg-4" *ngFor="let i  of info">
+
+      <div class="card">
+        <img src="{{i.imagen}}" alt="" class="card-image">
+        <div class="category"> {{i.nombre}} </div>
+        <div class="heading">{{i.nombre}}
+          <div class="author"> By <span class="name">Loyola</span> 4 days ago</div>
         </div>
       </div>
-    </div>
 
+
+    </div>
   </div>
 </div>

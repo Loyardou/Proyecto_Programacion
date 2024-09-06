@@ -10,3 +10,7 @@ h1{
 #img-1{
     filter: drop-shadow(1px 1px 20px white);
 }
+#titulo-text{
+font-weight: bolder;
+    font-size: 70px;
+}
