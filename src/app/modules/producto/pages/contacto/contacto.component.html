@@ -1,47 +1,50 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" >
-    <title>Contact Us</title>
+    <title>Pagina de Contacto</title>
+   
+    <script src="https://kit.fontawesome.com/b408879b64.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="contenedor">
-    <section class="contact">
-        <div class="contact__image-wrapper">
-            <img src="../../../../../assets/contacto.jpg" alt="" class="contact__image">
-        </div>
-        <div class="contact__right-side">
-            <h1 class="contact__title">Contactanos</h1>
-            <form action="" class="contact__form-wrapper">
-                <div class="contact__input-line">
-                    <label for="name" class="contact__label">Nombre</label>
-                    <input type="text" name="name" id="name" class="contact__input">
-                </div>
-                <div class="contact__input-line">
-                    <label for="email" class="contact__label">Email</label>
-                    <input type="email" name="email" id="email" class="contact__input">
-                </div>
-                <div class="contact__input-line">
-                    <label for="subject" class="contact__label">Razon</label>
-                    <input type="text" name="subject" id="subject" class="contact__input">
-                </div>
-                <div class="contact__input-line">
-                    <label for="message" class="contact__label">Mensaje</label>
-                    <textarea type="text" name="message" id="message" class="contact__input--textarea"></textarea>
-                </div>
-                <input type="submit" value="Enviar Mensaje" class="contact__submit-button">
-            </form>
-        </div>
-    </section>
-</div>
-
-
-
-
-
+    <div class="container">
+       
+        <div class="box-info">
+            <h1>CONTÁCTATE CON NOSOTROS</h1>
+            <div class="data">
+                <p><i class="fa-solid fa-phone"></i> +54 9 299 607-9339</p>
+                <p><i class="fa-solid fa-envelope"></i> ExampleAgmail.com</p>
+                <p><i class="fa-solid fa-location-dot"></i>  FDEZ ORO 68, CIPOLLETTI</p>
+            </div>
+            <div class="links">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i  class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                
+            </div>
+            </div>
+      
+        <form>
+            <div class="input-box">
+                <input type="text" placeholder="Nombre y apellido" required>
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="email" required placeholder="Correo electrónico">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Asunto">
+                <i class="fa-solid fa-pen-to-square"></i>
+            </div>
+            <div class="input-box">
+                <textarea placeholder="Escribe tu mensaje..."></textarea>
+            </div>
+            <button type="submit">Enviar mensaje</button>
+        </form>
+    </div>
 
 </body>
 </html>

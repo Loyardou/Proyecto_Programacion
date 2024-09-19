@@ -12,6 +12,7 @@ body {
 
 body {
     transition: all 1.5 ease;
+    cursor: url("../src/assets/patita-cursor.png");
 
 }
 

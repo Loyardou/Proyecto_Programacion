@@ -9,6 +9,8 @@ h1{
 }
 #img-1{
     filter: drop-shadow(1px 1px 20px white);
+    width: 150px;
+    height: 450px;
 }
 #titulo-text{
 font-weight: bolder;

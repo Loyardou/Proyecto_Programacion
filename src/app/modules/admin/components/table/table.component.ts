@@ -17,16 +17,18 @@ modalVisibleProducto: boolean = false;
 //Variable va a tomas el producto que nosotros elijamos
 productoSeleccionado!: Producto; 
 
+//obtendra el nombre de la imagen
+nombreImagen!: string;
 
-
-
+//obtendra la ruta de la imagen
+imagen!: string;
 
   producto = new FormGroup({
     nombre: new FormControl('', Validators.required),
     precio: new FormControl(0, Validators.required),
     descripcion: new FormControl('', Validators.required),
     categoria: new FormControl('', Validators.required),
-    imagen: new FormControl('', Validators.required),
+    // imagen: new FormControl('', Validators.required),
     alt: new FormControl('', Validators.required),
   })
 
@@ -46,18 +48,34 @@ productoSeleccionado!: Producto;
         descripcion: this.producto.value.descripcion!,
         precio: this.producto.value.precio!,
         categoria: this.producto.value.categoria!,
-        imagen: this.producto.value.imagen!,
+        //imagen ahora toma la URL generada desde Storage
+        imagen: 'this.producto.value.imagen!',
         alt: this.producto.value.alt!,
 
       }
-      await this.servicioCrud.crearProducto(nuevoProducto)
+
+      //enviamos nombre y url de la imagen; definimos carpeta de imagenes como "productos"
+
+      await this.servicioCrud.subirImagen(this.nombreImagen, this.imagen, "productos")
+      .then(res => {
+        this.servicioCrud.obtenerUrlImagen(resp)
+        .then(url => {
+
+        })
+      })
+
+      // Ahora metodo crearProducto recibe los datos del formulario y la URL formateada
+      this.servicioCrud.crearProducto(nuevoProducto, url)
         .then(producto => {
-          alert("Ha agregado un nuevo producto con exito!");
+          alert("Ha agregado un nuevo producto con exito!)");
+          this.producto.reset();
 
         })
         .catch(error => {
           alert("Hubo un problema al agregar un nuevo producto:(")
+          this.producto.reset();
         })
+      
     }
   }
   mostrarBorrar(productoSeleccionado: Producto){
