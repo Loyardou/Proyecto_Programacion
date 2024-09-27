@@ -1,44 +1,43 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary" id="fondo-nav">
   <div class="container-fluid">
-    <a class="navbar-brand" >
-      
+    <!-- Marca de la barra de navegación -->
+    <a class="navbar-brand">
+      <!-- Botón que abre el menú -->
       <button mat-button [matMenuTriggerFor]="menu" id="boton-menu">Menu</button>
+      <!-- Menú desplegable -->
       <mat-menu id="menu-item" #menu="matMenu">
         <button mat-menu-item routerLink="/producto">Producto</button>
         <button mat-menu-item routerLink="/adopcion">Adopcion</button>
         <button mat-menu-item routerLink="/ubicacion">Ubicacion</button>
         <button mat-menu-item routerLink="/contacto">Contacto</button>
       </mat-menu>
-      
+      <!-- Botón de icono que redirige a la página de inicio -->
       <button mat-icon-button aria-label="Example icon-button with heart icon" id="person-menu" routerLink="/inicio">
         <mat-icon>house</mat-icon>
       </button>
     </a>
+    <!-- Botón para colapsar la barra de navegación en pantallas pequeñas -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-
-       
-
+        <!-- Aquí puedes agregar más elementos de navegación si es necesario -->
       </ul>
-
-     
-
-
+      <!-- Botón de icono que abre el menú de usuario -->
       <button mat-icon-button [matMenuTriggerFor]="usuario" class="example-icon favorite-icon"
         aria-label="Example icon-button with heart icon" id="person-menu">
         <mat-icon>person</mat-icon>
       </button>
+      <!-- Menú de usuario -->
       <mat-menu #usuario="matMenu">
         <button mat-menu-item (click)="iniciar()" *ngIf="logueado" routerLink="/registro">Registrarse</button>
-        <button mat-menu-item (click)="iniciar()" *ngIf="logueado" routerLink="/inicio-sesion">Iniciar sesion</button>
-        <button mat-menu-item (click)="cerrarSesion()" *ngIf="deslogueado">Cerrar Sesion</button>
+        <button mat-menu-item (click)="iniciar()" *ngIf="logueado" routerLink="/inicio-sesion">Iniciar sesión</button>
+        <button mat-menu-item (click)="cerrarSesion()" *ngIf="deslogueado">Cerrar sesión</button>
+        
       </mat-menu>
-
-
+      <!-- Interruptor de palanca para cambiar el fondo -->
       <div class="toggle-switch">
         <label class="switch-label" for="toggle" id="label_toggle">
           <input type="checkbox" class="checkbox" id="toggle" (click)="cambiarFondo()">
@@ -47,9 +46,4 @@
       </div>
     </div>
   </div>
-
-
-
-
-
 </nav>

@@ -8,6 +8,7 @@
     box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.37);
     backdrop-filter: blur(30px);
     border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 400px;
 }
 .centrar{
     display: flex;
@@ -15,11 +16,33 @@
     text-align: center;
     justify-content: center;
 }
-.boton{
-    width: 120px;
-    margin: auto;
-    color: dodgerblue;
+.boton {
+    font: inherit;
+    background-color: #f0f0f0;
+    border: 0;
+    color: #242424;
+    border-radius: 0.5em;
+    font-size: 1.35rem;
+    padding: 0.375em 1em;
+    font-weight: 600;
+    text-shadow: 0 0.0625em 0 #fff;
+    box-shadow: inset 0 0.0625em 0 0 #f4f4f4, 0 0.0625em 0 0 #efefef,
+      0 0.125em 0 0 #ececec, 0 0.25em 0 0 #e0e0e0, 0 0.3125em 0 0 #dedede,
+      0 0.375em 0 0 #dcdcdc, 0 0.425em 0 0 #cacaca, 0 0.425em 0.5em 0 #cecece;
+    transition: 0.15s ease;
+    cursor: pointer;
+   width: 300px; 
+   display: block;
+  margin: 0 auto;
+  }
+  button:active {
+    translate: 0 0.225em;
+    box-shadow: inset 0 0.03em 0 0 #f4f4f4, 0 0.03em 0 0 #efefef,
+      0 0.0625em 0 0 #ececec, 0 0.125em 0 0 #e0e0e0, 0 0.125em 0 0 #dedede,
+      0 0.2em 0 0 #dcdcdc, 0 0.225em 0 0 #cacaca, 0 0.225em 0.375em 0 #cecece;
+      
 }
+
 .fotoperfil{
     width: 120px;
     height: 110px;
@@ -31,10 +54,19 @@
     box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.37);
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
-#color-h1{
-    backdrop-filter: blur(30px);
-    background-color:  rgba(255, 255, 255, 0.37);
-    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.37);
+
     
-    border-radius: 20px;
+   
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0 0 0 / .8), rgba(0 0 0 / .8)), url(src/assets/fondo-inicio.jfif);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+h1{
+    color: white;
 }

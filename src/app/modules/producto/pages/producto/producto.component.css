@@ -1,18 +1,49 @@
-.container{
+.container {
     text-align: center;
     justify-content: center;
     display: flex;
+    height: 100%;
 
 }
-h1{
+
+h1 {
     padding: 1rem;
 }
-#img-1{
+
+#img-1 {
     filter: drop-shadow(1px 1px 20px white);
-    width: 150px;
-    height: 450px;
+    width: 300px;
+    height: 194px;
 }
-#titulo-text{
-font-weight: bolder;
+
+#img-carrousel {
+
+    width: "194px";
+    height: "250px";
+}
+
+#titulo-text {
+    font-weight: bolder;
     font-size: 70px;
+}
+
+#body {
+
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0 0 0 / .8), rgba(0 0 0 / .8)), url(src/assets/fondo-productos.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 5rem;
+    display: block;
+   
+}
+
+
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }

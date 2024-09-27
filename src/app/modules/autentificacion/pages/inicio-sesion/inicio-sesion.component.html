@@ -1,29 +1,44 @@
-
-<div class="titulo-text">
-    <h1>INICIAR SESION</h1>
-</div>
-<div class="centrar">
-  <img src="assets/fotoperfil.jfif" alt="" class="fotoperfil">
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<!-- Contenedor principal -->
 <div class="container">
     <div class="row">
-   
-        <mat-form-field appearance="fill">
-          <mat-label>Ingresar Email</mat-label>
-          <input [(ngModel)]="usuarioIngresado.email" matInput placeholder="Ingresar email">
-          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          
-        </mat-form-field>
-        <mat-form-field>
-          <mat-label>Enter your password</mat-label>
-          <input [(ngModel)]="usuarioIngresado.password" matInput [type]="hide ? 'password' : 'text'" #input minlength="6" required>
-          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-          </button>
-          <mat-hint text-align="start">minimo:6/{{input.value.length}}</mat-hint>
-        </mat-form-field>
-      
-     
-      <button mat-flat-button  class="boton" (click)="iniciarSesion()">Iniciar Sesion</button>
+      <!-- Título de la página -->
+      <div class="titulo-text">
+        <h1>INICIAR SESION</h1>
+      </div>
+      <!-- Imagen de perfil centrada -->
+      <div class="centrar">
+        <img src="assets/fotoperfil.jfif" alt="" class="fotoperfil">
+      </div>
+      <!-- Campo de formulario para ingresar el email -->
+      <mat-form-field appearance="fill">
+        <mat-label>Ingresar Email</mat-label>
+        <input [(ngModel)]="usuarioIngresado.email" matInput placeholder="Ingresar email">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+      <!-- Campo de formulario para ingresar la contraseña -->
+      <mat-form-field>
+        <mat-label>Ingresa tu contraseña</mat-label>
+        <input [(ngModel)]="usuarioIngresado.password" matInput [type]="hide ? 'password' : 'text'" #input minlength="6" required>
+        <!-- Botón para mostrar/ocultar la contraseña -->
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <!-- Indicador de longitud mínima de la contraseña -->
+        <mat-hint text-align="start">minimo:6/{{input.value.length}}</mat-hint>
+      </mat-form-field>
+      <!-- Botón para iniciar sesión -->
+      <button mat-flat-button class="boton" (click)="iniciarSesion()">Iniciar Sesion</button>
     </div>
 </div>
+
+</body>
+</html>

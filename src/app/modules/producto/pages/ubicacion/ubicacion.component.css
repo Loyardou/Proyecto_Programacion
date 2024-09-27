@@ -47,7 +47,7 @@ body {
 }
 
 .data > p > i {
-    color:#AECEE3;
+    color:rgb(255, 249, 167);
     margin-right: 10px;
     font-size:25px;
 }
@@ -63,13 +63,13 @@ body {
     text-decoration: none;
     width: 40px;
     height: 40px;
-    background: #AECEE3;
+    background: rgb(255, 249, 167);
     text-align: center;
     transition: .1s;
 }
 
 .links > a > i {
-    color:#fff;
+    color:rgb(6, 143, 255);
     line-height: 40px;
     font-size: 20px;
 }
@@ -94,7 +94,7 @@ form {
     border:3px solid transparent;
     letter-spacing: 1px;
     transition:.3s;
-    color:#fff;
+    color:rgb(6, 143, 255);
     
 }
 
@@ -111,7 +111,7 @@ form {
 
 .input-box > input:focus,
 .input-box > textarea:focus {
-    border-bottom:3px solid #AECEE3;
+    border-bottom:3px solid rgb(255, 249, 167);
     animation: shake .2s;
 }
 
@@ -124,7 +124,7 @@ form {
     letter-spacing: 1px;
     outline: none;
     transition:.3s;
-    color:#fff;
+    color:rgb(6, 143, 255);
     letter-spacing: 1.5px;
 }
 
@@ -139,15 +139,15 @@ form {
 }
 
 .input-box > input:focus ~ i {
-    color:#AECEE3;
+    color:rgb(255, 249, 167);
 }
 
 form > button {
     width: 100%;
     padding: 10px;
     outline: none;
-    background: #AECEE3;
-    color:#fff;
+    background: rgb(255, 249, 167);
+    color:rgb(6, 143, 255);
     border:none;
     transition: .1s;
     cursor: pointer;
@@ -156,7 +156,7 @@ form > button {
 
 form > button:hover,
 .links > a:hover {
-    background: #AECEE3;
+    background: rgb(255, 249, 167);
 }
 
 @keyframes shake { 

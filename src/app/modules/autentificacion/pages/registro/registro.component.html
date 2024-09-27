@@ -1,60 +1,72 @@
 
-  
-
-<div class="centrar">
-  <h1 id="color-h1">Registro</h1>
-</div>
-  
-  <div class="centrar">
-    <img src="assets/fotoperfil.jfif" alt="" class="fotoperfil">
-  </div>
-  
-
-    <div class="container">
-      <div class="row">
-<mat-form-field appearance="fill">
-    <mat-label>Ingrese su nombre</mat-label>
-    <!--NGMODEL = CONECTA DE FORMA BIDIRECCIONAL COMO UN FORMULARIO-->
-    <input [(ngModel)]="usuarios.nombre" matInput placeholder="Ingrese su nombre">
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
     
-  </mat-form-field>
-
-
-
-  <mat-form-field appearance="fill">
-    <mat-label>Ingrese su apellido</mat-label>
-    <input [(ngModel)]="usuarios.apellido" matInput placeholder="Ingrese su apellido" required>
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
    
-  </mat-form-field>
-
-  <mat-form-field appearance="fill">
-    <mat-label>ingrese su email:</mat-label>
-    <input [(ngModel)]="usuarios.email" matInput placeholder="Ingrese su gmail" required>
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      
     
-  </mat-form-field>
+        <div class="container">
+          <div class="row">
+            <div class="centrar">
+              <h1 id="color-h1">Registro</h1>
+            </div>
+              
+              <div class="centrar">
+                <img src="assets/fotoperfil.jfif" alt="" class="fotoperfil">
+              </div>
+    <mat-form-field appearance="fill">
+        <mat-label>Ingrese su nombre</mat-label>
+        <!--NGMODEL = CONECTA DE FORMA BIDIRECCIONAL COMO UN FORMULARIO-->
+        <input [(ngModel)]="usuarios.nombre" matInput placeholder="Ingrese su nombre">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        
+      </mat-form-field>
+    
+    
+    
+      <mat-form-field appearance="fill">
+        <mat-label>Ingrese su apellido</mat-label>
+        <input [(ngModel)]="usuarios.apellido" matInput placeholder="Ingrese su apellido" required>
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+       
+      </mat-form-field>
+    
+      <mat-form-field appearance="fill">
+        <mat-label>ingrese su email:</mat-label>
+        <input [(ngModel)]="usuarios.email" matInput placeholder="Ingrese su gmail" required>
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        
+      </mat-form-field>
+    
+      <mat-form-field>
+        <mat-label>Seleccione un rol</mat-label>
+        <mat-select [(ngModel)]="usuarios.rol" required>
+          <mat-option value="adm">Administrador</mat-option>
+          <mat-option value="vis">Visitante</mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+    
+      <mat-form-field>
+        <mat-label>Ingrese su contraseña</mat-label>
+        <input [(ngModel)]="usuarios.password" matInput [type]="hide ? 'password' : 'text'" #input minlength="6" required>
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-hint text-align="start">minimo:6/{{input.value.length}}</mat-hint>
+      </mat-form-field>
+      <button mat-raised-button  class="boton" (click)="registrar()">Registrarme</button>
+    
+    
+    </div>
+    </div>
+    
+  </body>
+  </html>
 
-  <mat-form-field>
-    <mat-label>Seleccione un rol</mat-label>
-    <mat-select [(ngModel)]="usuarios.rol" required>
-      <mat-option value="adm">Administrador</mat-option>
-      <mat-option value="vis">Visitante</mat-option>
-    </mat-select>
-  </mat-form-field>
-  
-
-  <mat-form-field>
-    <mat-label>Enter your password</mat-label>
-    <input [(ngModel)]="usuarios.password" matInput [type]="hide ? 'password' : 'text'" #input minlength="6" required>
-    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-    </button>
-    <mat-hint text-align="start">minimo:6/{{input.value.length}}</mat-hint>
-  </mat-form-field>
-  <button mat-raised-button  class="boton" (click)="registrar()">Registrarme</button>
-
-
-</div>
-</div>
