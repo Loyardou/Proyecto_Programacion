@@ -84,9 +84,10 @@ export class TableComponent {
   }
 
 
-  
+
   //Funcion para eliminar definitivamente al producto
   borrarProducto() {
+    // envia ID del producto eliminado y la ubicacion en el almacenamiento de STORAGE
     this.servicioCrud.eliminarProducto(this.productoSeleccionado.idProducto, this.productoSeleccionado.imagen)
       .then(respuesta => {
         alert("se ha eliminado correctamente")
@@ -105,7 +106,7 @@ export class TableComponent {
       precio: productoSeleccionado.precio,
       descripcion: productoSeleccionado.descripcion,
       categoria: productoSeleccionado.categoria,
-     // imagen: productoSeleccionado.imagen,
+      // imagen: productoSeleccionado.imagen,
       alt: productoSeleccionado.alt,
 
     })
@@ -123,6 +124,36 @@ export class TableComponent {
       alt: this.producto.value.alt!,
 
     }
+    //verificamos que el usuario ingrese una nueva imagen o no
+    if (this.imagen) {
+      this.servicioCrud.subirImagen(this.nombreImagen, this.imagen, "productos")
+        .then(resp => {
+          this.servicioCrud.obtenerUrlImagen(resp)
+            .then(url => {
+              datos.imagen = url;
+              // actualizamos los datos desde el formulario de edicion
+              this.actualizarProducto(datos)
+              // vaciamos casillas del formulario
+              this.producto.reset();
+            })
+            .catch(error => {
+              alert("hubo un problema al subir la imagen:( \ n " + error)
+              this.producto.reset();
+            })
+        })
+    } else {
+
+      /*
+      Actualizamos 
+       */
+
+      this.actualizarProducto(datos)
+    }
+  }
+
+
+  actualizarProducto(datos: Producto) {
+
     this.servicioCrud.modificarProducto(this.productoSeleccionado.idProducto, datos)
       .then(producto => {
         alert("El producto fue modificado con exito")
@@ -130,9 +161,42 @@ export class TableComponent {
       .catch(error => {
         alert("Hubo un problema al modificar el producto")
       })
+
+    //Metodo para cargar imagenes
   }
 
-  actualizarProducto(){
-    
+  cargarImagen(event: any) {
+    //variable para obtener el archivo subido desde el input del HTML
+    let archivo = event.target.files[0];
+
+    //variable para crear un nuevo objeto de tipo "archivo" o "file" y poder leerlo
+    let reader = new FileReader();
+
+    if (archivo != undefined) {
+      /*
+      LLamamos a metodo readAsDataUrl para leer toda la informacion recibida.
+      Enviamos como parametro el archivo porque sera el encargado de tener la info,
+      ingresada por el usuario
+       */
+      reader.readAsDataURL(archivo);
+
+      //Definimos que haremos con la informacion mediante funcion flecha
+      reader.onloadend = () => {
+        let url = reader.result;
+        // verificamos que la url sea existente y diferente a "nula"
+        if (url != null) {
+          //Definimos nombre de la imagen con atributo "name" del input
+          this.nombreImagen = archivo.name;
+
+          // definimos ruta de la imagen segun url recibida en formato cadena (string)
+          this.imagen = url.toString();
+
+        }
+      }
+
+    }
+
   }
+
+
 }

@@ -82,8 +82,14 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Ingrese una imagen:</label>
-                <input type="text" class="formControl" formControlName="imagen" placeholder="ej: Ingrese un vinculo de una imagen">
-    
+
+                <!-- <input type="text" class="formControl" formControlName="imagen" placeholder="ej: Ingrese un vinculo de una imagen"> -->
+                <!--
+                type="file" -> acepte todo tipo de extensiones (jpg, png, pdf, doc, gif)
+                (change)="cargarImagen($event)" -> ejecuta el evento de cargarImagen que definimos en la logica 
+                del componente
+                -->
+                <input type="file" accept="imagen/*" (change)="cargarImagen($event)">
             </div>
             <div class="mb-3">
                 <label class="form-label">Ingrese un texto alternativo:</label>
