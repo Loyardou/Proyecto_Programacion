@@ -29,7 +29,7 @@ constructor(){
       {
         id: "Purina",
         nombre : "Pro plan",
-        imagen : "https://th.bing.com/th/id/OIP.ZrI6NClKmhHKcKu_X-tJFQAAAA?pid=ImgDet&w=175&h=175&c=7",
+        imagen : "https://th.bing.com/th/id/R.4a1d0d560bda7d934767d75a624d73b9?rik=ujgKvbe%2fR3Bblg&pid=ImgRaw&r=0",
         alt : "Purina",
         },
 {

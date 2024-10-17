@@ -2,11 +2,16 @@ import { Injectable } from '@angular/core';
 // servicio de autentificacion de firebase
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  
+  private rolUsuario: string | null = null;
   // referenciar auth de firebase
+
   constructor(
     private auth: AngularFireAuth,
     private servicioFireStore: AngularFirestore
@@ -49,5 +54,16 @@ export class AuthService {
 
   obtenerUsuario(email: string) {
     return this.servicioFireStore.collection('usuarios', ref => ref.where('email', '==', email)).get().toPromise();
+  }
+  obtenerRol(uid: string): Observable <string | null>{
+    return this.servicioFireStore.collection('usuarios').doc(uid).valueChanges()
+    .pipe(map((usuario:any) => usuario ? usuario.rol : null));
+
+  }
+  enviarRolUsuario(rol:string){
+    this.rolUsuario = rol;
+  }
+  obtenerRolUsuario(): string  | null {
+    return this.rolUsuario;
   }
 }

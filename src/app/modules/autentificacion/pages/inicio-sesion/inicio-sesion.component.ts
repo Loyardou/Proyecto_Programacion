@@ -82,7 +82,7 @@ export class InicioSesionComponent {
     //       alert("me parecia que eras tan inutil ")
     //     }
     //   }
-    // }
+    
 
     const credenciales = {
       email: this.usuarioIngresado.email,

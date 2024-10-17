@@ -101,3 +101,11 @@ mat-card-header{
 .name:hover {
   cursor: pointer;
 }
+.boton-css{
+  padding: 10px 20px;
+  background-color: #4cafaa;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  
+}

@@ -63,4 +63,6 @@
     cursor: pointer;
   }
   
- 
+ .fondo-contenedor{
+    background-color: aliceblue;
+ }
