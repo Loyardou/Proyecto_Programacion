@@ -1,65 +1,58 @@
 
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  </head>
-  <body>
-    
-   
-      
-    
-        <div class="container">
-          <div class="row">
-            <div class="centrar">
-              <h1 id="color-h1">Registro</h1>
+    <title>Document</title> 
+</head>
+<body>
+    <div class="container"> <!-- Contenedor principal -->
+        <div class="row"> <!-- Fila principal -->
+            <div class="centrar"> <!-- Div centrado para el encabezado -->
+                <h1 id="color-h1">Registro</h1> <!-- Título de la página -->
             </div>
-              
-              <div class="centrar">
-                <img src="assets/fotoperfil.jfif" alt="" class="fotoperfil">
-              </div>
-    <mat-form-field appearance="fill">
-        <mat-label>Ingrese su nombre</mat-label>
-        <!--NGMODEL = CONECTA DE FORMA BIDIRECCIONAL COMO UN FORMULARIO-->
-        <input [(ngModel)]="usuarios.nombre" matInput placeholder="Ingrese su nombre">
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-        
-      </mat-form-field>
-    
-    
-    
-      <mat-form-field appearance="fill">
-        <mat-label>Ingrese su apellido</mat-label>
-        <input [(ngModel)]="usuarios.apellido" matInput placeholder="Ingrese su apellido" required>
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-       
-      </mat-form-field>
-    
-      <mat-form-field appearance="fill">
-        <mat-label>ingrese su email:</mat-label>
-        <input [(ngModel)]="usuarios.email" matInput placeholder="Ingrese su gmail" required>
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-        
-      </mat-form-field>
-    
-     
-    
-      <mat-form-field>
-        <mat-label>Ingrese su contraseña</mat-label>
-        <input [(ngModel)]="usuarios.password" matInput [type]="hide ? 'password' : 'text'" #input minlength="6" required>
-        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-        </button>
-        <mat-hint text-align="start">minimo:6/{{input.value.length}}</mat-hint>
-      </mat-form-field>
-      <button mat-raised-button  class="boton" (click)="registrar()">Registrarme</button>
-    
-    
+
+            <div class="centrar"> <!-- Div centrado para la imagen -->
+                <img src="assets/fotoperfil.jfif" alt="" class="fotoperfil"> <!-- Imagen de perfil -->
+            </div>
+
+            <!-- Campo de formulario para el nombre -->
+            <mat-form-field appearance="fill">
+                <mat-label>Ingrese su nombre</mat-label>
+                <!-- NGMODEL = Conecta de forma bidireccional como un formulario -->
+                <input [(ngModel)]="usuarios.nombre" matInput placeholder="Ingrese su nombre">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> <!-- Icono -->
+            </mat-form-field>
+
+            <!-- Campo de formulario para el apellido -->
+            <mat-form-field appearance="fill">
+                <mat-label>Ingrese su apellido</mat-label>
+                <input [(ngModel)]="usuarios.apellido" matInput placeholder="Ingrese su apellido" required>
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> <!-- Icono -->
+            </mat-form-field>
+
+            <!-- Campo de formulario para el email -->
+            <mat-form-field appearance="fill">
+                <mat-label>ingrese su email:</mat-label>
+                <input [(ngModel)]="usuarios.email" matInput placeholder="Ingrese su gmail" required>
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> <!-- Icono -->
+            </mat-form-field>
+
+            <!-- Campo de formulario para la contraseña -->
+            <mat-form-field>
+                <mat-label>Ingrese su contraseña</mat-label>
+                <input [(ngModel)]="usuarios.password" matInput [type]="hide ? 'password' : 'text'" #input minlength="6" required>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon> <!-- Icono de visibilidad -->
+                </button>
+                <mat-hint text-align="start">minimo:6/{{input.value.length}}</mat-hint> <!-- Sugerencia de longitud mínima -->
+            </mat-form-field>
+
+            <!-- Botón para registrarse -->
+            <button mat-raised-button class="boton" (click)="registrar()">Registrarme</button>
+        </div>
     </div>
-    </div>
-    
-  </body>
-  </html>
+</body>
+</html>
 

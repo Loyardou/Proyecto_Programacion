@@ -43,11 +43,18 @@
 }
 .img-1{
     filter: drop-shadow(1px 1px 20px white);
+    display: block;
+    margin: 20px auto; 
+    padding: 10px;
+    align-self: center;
+    object-fit: cover;
 }
 
 .Texto-secundario{
     font-weight: bolder;
     font-size: 45px;
+    margin: 20px;
+    
 }
 .contenedor-appcard{
     padding: 10px;
@@ -65,4 +72,7 @@
   
  .fondo-contenedor{
     background-color: aliceblue;
+ }
+ .col{
+    margin: 20px;
  }

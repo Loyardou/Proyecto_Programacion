@@ -37,6 +37,8 @@ p{
 #tamaño-img{
  
   height: 150px;
+  align-self: center;
+  object-fit: cover;
 }
 
 

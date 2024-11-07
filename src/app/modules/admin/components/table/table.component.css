@@ -1,0 +1,12 @@
+.tamaño-img{
+    width: 120px;
+    height: 100px;
+}
+.contenedor-img{
+    width: 250px;
+    height: 150px;
+}
+.agregarproducto{
+    align-items: center;
+    display: flex;
+}

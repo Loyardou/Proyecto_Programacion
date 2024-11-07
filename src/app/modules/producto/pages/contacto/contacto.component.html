@@ -1,50 +1,49 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina de Contacto</title>
-   
-    <script src="https://kit.fontawesome.com/b408879b64.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8"> <!-- Configuración de codificación de caracteres -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibilidad con IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Escala correcta en dispositivos móviles -->
+    <title>Pagina de Contacto</title> <!-- Título de la página -->
+    <script src="https://kit.fontawesome.com/b408879b64.js" crossorigin="anonymous"></script> <!-- Iconos de FontAwesome -->
 </head>
 <body>
-    <div class="container">
-       
-        <div class="box-info">
-            <h1>CONTÁCTATE CON NOSOTROS</h1>
-            <div class="data">
-                <p><i class="fa-solid fa-phone"></i> +54 9 299 607-9339</p>
-                <p><i class="fa-solid fa-envelope"></i> ExampleAgmail.com</p>
-                <p><i class="fa-solid fa-location-dot"></i>  FDEZ ORO 68, CIPOLLETTI</p>
+    <br>
+    <div class="container"> <!-- Contenedor principal -->
+        <div class="box-info"> <!-- Caja de información -->
+            <h1>CONTÁCTATE CON NOSOTROS</h1> <!-- Título principal -->
+            <div class="data"> <!-- Información de contacto -->
+                <p><i class="fa-solid fa-phone"></i> +54 9 299 607-9339</p> <!-- Teléfono -->
+                <p><i class="fa-solid fa-envelope"></i> ExampleAgmail.com</p> <!-- Correo electrónico -->
+                <p><i class="fa-solid fa-location-dot"></i> FDEZ ORO 68, CIPOLLETTI</p> <!-- Dirección -->
             </div>
-            <div class="links">
+            <div class="links"> <!-- Enlaces a redes sociales -->
                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i  class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
                 <a href="#"><i class="fa-brands fa-twitter"></i></a>
                 <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                
             </div>
-            </div>
-      
+        </div>
+
+        <!-- Formulario de contacto -->
         <form>
-            <div class="input-box">
+            <div class="input-box"> <!-- Campo de entrada para el nombre -->
                 <input type="text" placeholder="Nombre y apellido" required>
                 <i class="fa-solid fa-user"></i>
             </div>
-            <div class="input-box">
+            <div class="input-box"> <!-- Campo de entrada para el correo electrónico -->
                 <input type="email" required placeholder="Correo electrónico">
                 <i class="fa-solid fa-envelope"></i>
             </div>
-            <div class="input-box">
+            <div class="input-box"> <!-- Campo de entrada para el asunto -->
                 <input type="text" placeholder="Asunto">
                 <i class="fa-solid fa-pen-to-square"></i>
             </div>
-            <div class="input-box">
+            <div class="input-box"> <!-- Campo de texto para el mensaje -->
                 <textarea placeholder="Escribe tu mensaje..."></textarea>
             </div>
+            <!-- Botón de envío -->
             <button type="submit">Enviar mensaje</button>
         </form>
     </div>
-
 </body>
 </html>

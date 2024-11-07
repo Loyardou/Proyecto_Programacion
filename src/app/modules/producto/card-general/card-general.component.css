@@ -1,0 +1,25 @@
+#container-compra{
+    width: 900px;
+    
+   
+}
+#fondo-bar{
+    background-color: rgb(255, 249, 167);
+
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.contenedor-body{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px); /* Ajusta este valor según la cantidad de columnas */
+    padding: 20px;
+    box-sizing: border-box;
+
+}

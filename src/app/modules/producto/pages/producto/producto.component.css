@@ -1,9 +1,10 @@
 .container {
-    text-align: center;
-    justify-content: center;
     display: flex;
-    height: 100%;
-
+    flex-wrap: wrap;
+    gap: 20px; /* Esto añade el gutter entre las cards */
+    padding: 20px;
+    justify-content: center; /* Alinea las cards horizontalmente en el centro */
+    align-items: center; /* Alinea las cards verticalmente en el centro */
 }
 
 h1 {
@@ -17,9 +18,8 @@ h1 {
 }
 
 #img-carrousel {
-
-    width: "194px";
-    height: "250px";
+    width: 194px; /* Sin comillas */
+    height: 250px; /* Sin comillas */
 }
 
 #titulo-text {
@@ -28,7 +28,7 @@ h1 {
 }
 
 #body {
-
+    display: flex; /* Cambiado a flex para centrar mejor el contenido */
     justify-content: center;
     align-items: center;
     background: linear-gradient(rgba(0 0 0 / .8), rgba(0 0 0 / .8)), url(src/assets/fondo-productos.jpg);
@@ -36,14 +36,12 @@ h1 {
     background-position: center center;
     background-repeat: no-repeat;
     padding: 5rem;
-    display: block;
-   
 }
 
-
-
-.row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+.carousel-item {
+    width: 194px; /* Sin comillas */
+    height: 250px; /* Sin comillas */
+}
+.card {
+    flex: 1 1 18rem; /* Cada card ocupará 18rem de ancho, ajustable según tus necesidades */
 }
