@@ -7,6 +7,8 @@ import { Pedido } from 'src/app/models/pedido';
 import { map } from 'rxjs';
 import { Producto } from 'src/app/models/producto';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
+
 
 @Injectable({
   providedIn: 'root'
@@ -38,6 +40,7 @@ export class CarritoService {
     private servicioCrud: CrudService,
     private servicioAuth: AuthService,
     private servicioFirestore: AngularFirestore,
+    public servicioRutas: Router,
   ) {
     // creamos un subcoleccion dentro de la coleccion de usuarios y le damos ese valor a pedidosColeccion 
     this.pedidosColeccion = this.servicioFirestore.collection(`usuarios/${this.uid}/pedido`)
@@ -47,10 +50,13 @@ export class CarritoService {
     this.servicioAuth.obtenerUid().then(uid => {
       //Obtenemos el ID del usuario para la subcoleccion
       this.uid = uid
-      if (this.uid) {
-        console.log(this.uid)
-      } else {
+      if (this.uid === null) {
+        
         console.error('No se obtuvo el UID')
+        this.servicioRutas.navigate(['/inicio-sesion'])
+      } else {
+        this.pedidosColeccion = this.servicioFirestore.collection(`usuarios/${this.uid}/pedido
+          `)
       }
     })
   }
@@ -76,6 +82,21 @@ export class CarritoService {
         icon:'error',
       })
     }
+    
  }
+ borrarPedido(pedido:Pedido){
+  try {
+    this.pedidosColeccion.doc(pedido.idPedido).delete();
+    Swal.fire({
+      text:'!Ha borrado su pedido con exito',
+      icon:'info',
+    })
+  } catch (error) {
+    Swal.fire({
+      text:'Ha ocurrido un error: n/'+error,
+      icon:'error'
+    })
+  }
+}
 }
 

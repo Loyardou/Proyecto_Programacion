@@ -20,6 +20,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
     ProductoComponent,
     ContactoComponent,
     UbicacionComponent,
+   
 
     CardJuguetesComponent,
     JuguetesComponent,
@@ -28,7 +29,9 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    ProductoRoutingModule
+    ProductoRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   exports: [
     ProductoComponent,
