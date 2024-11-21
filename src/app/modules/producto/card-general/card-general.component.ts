@@ -39,6 +39,7 @@ export class CardGeneralComponent {
       this.coleccionProductos = producto;
 
     })
+    this.servicioCarrito.iniciarCart()
 
   }
   mostrarVer(info: Producto) {

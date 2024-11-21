@@ -3,39 +3,29 @@
 
 
 <div id="body">
-  <div class="contenedor-carrousel">
-    <div class="row">
-      <h1 id="titulo-text">Productos</h1> <!-- Título de la sección -->
-      <div id="carouselExample" class="carousel slide">
-        <div class="carousel-inner">
-          <!-- Primer elemento del carrusel, marcado como activo -->
-          <div class="carousel-item active">
-            <img src="../../../../../assets/carrousel-2.png" alt="..." id="img-1">
-          </div>
-          <!-- Iteramos sobre productosCarrusel para crear los elementos del carrusel -->
-          <div class="carousel-item" *ngFor="let producto of productosCarrusel">
-            <img src="{{producto.imagen}}" alt="{{producto.alt}}" id="img-carrousel">
-          </div>
-        </div>
-        <!-- Botones de control del carrusel -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+  <h1 id="titulo-text">Productos</h1> <!-- Título de la sección -->
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <!-- Primer elemento del carrusel, marcado como activo -->
+      <div class="carousel-item active">
+        <img src="../../../../../assets/carrousel-2.png" alt="..." id="img-1">
       </div>
-    </div>
-  </div>
+      <!-- Iteramos sobre productosCarrusel para crear los elementos del carrusel -->
+      <div class="carousel-item" *ngFor="let producto of productosCarrusel">
+        <img src="{{producto.imagen}}" alt="{{producto.alt}}" id="img-carrousel">
+      </div>
 
-  <div class="row">
-    <div class="container">
-      <div class="Contenedor-body">
-        <!-- Componente de tarjeta general que emite el evento productoAgregado y recibe productoReciente -->
-        <app-card-general (productoAgregado)="productoAnadido($event)" [productoReciente]="product"></app-card-general>
-      </div>
+      <!-- Botones de control del carrusel -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
   </div>
+  <!-- Componente de tarjeta general que emite el evento productoAgregado y recibe productoReciente -->
+  <app-card-general (productoAgregado)="productoAnadido($event)" [productoReciente]="product"></app-card-general>
 </div>

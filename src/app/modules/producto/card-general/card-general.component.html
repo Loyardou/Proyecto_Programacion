@@ -1,5 +1,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<div class="col-lg-4">
+<div class="row">
 <div class="contenido" *ngFor="let productos of coleccionProductos">
   <!-- Iteramos sobre coleccionProductos para generar tarjetas -->
   <div class="card" style="width: 18rem;">
@@ -15,7 +16,8 @@
       <button class="btn" data-bs-toggle="modal" data-bs-target="#mostrar" (click)="mostrarVer(productos)">ver más</button>
   </div>
 </div>
-
+</div>
+</div>
 <div class="modal" tabindex="-1" *ngIf="modalVisible" id="mostrar">
   <div class="modal-dialog">
       <div class="modal-content">
